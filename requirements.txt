@@ -1,0 +1,25 @@
+# Core scientific computing
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.6
+pandas>=1.5
+scikit-learn>=1.2
+
+# Deep learning
+torch>=2.0
+torchvision>=0.15
+
+# Progress & utilities
+tqdm>=4.64
+pydantic>=2.0
+
+# Notebooks (optional but recommended)
+jupyter>=1.0
+ipywidgets>=8.0
+plotly>=5.0
+seaborn>=0.12
+
+# JAX ecosystem (optional, for PINN examples)
+# jax>=0.4
+# flax>=0.7
+# optax>=0.1

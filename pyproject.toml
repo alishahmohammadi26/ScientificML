@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "scientificml-pharma"
+version = "0.2.0"
+description = "Scientific Machine Learning for Biopharmaceutical Process Development"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = [
+    "scientific-machine-learning",
+    "physics-informed-neural-networks",
+    "biopharmaceutical",
+    "process-development",
+    "drug-discovery",
+    "deep-learning",
+    "continuous-manufacturing",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.6",
+    "pandas>=1.5",
+    "scikit-learn>=1.2",
+    "torch>=2.0",
+    "tqdm>=4.64",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+jax = ["jax>=0.4", "flax>=0.7", "optax>=0.1"]
+notebooks = ["jupyter>=1.0", "ipywidgets>=8.0", "plotly>=5.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1",
+    "mypy>=1.0",
+    "pre-commit>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/alishahmohammadi22/ScientificML"
+Documentation = "https://alishahmohammadi22.github.io/ScientificML"
+Repository = "https://github.com/alishahmohammadi22/ScientificML"
+Issues = "https://github.com/alishahmohammadi22/ScientificML/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=scientificml --cov-report=term-missing"
