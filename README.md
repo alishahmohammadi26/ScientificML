@@ -119,3 +119,5 @@ Associate Director, FAIR Data Strategy · Takeda Pharmaceutical
 ## License
 
 [MIT License](LICENSE) — free to use, modify, and distribute with attribution.
+
+<!-- maintained-note: keep this repo tidy -->
